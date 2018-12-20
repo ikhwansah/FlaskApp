@@ -306,11 +306,6 @@ def updateWish():
             _isPrivate = request.form['isPrivate']
             _isDone = request.form['isDone']
 
-            
-
-
-            
-
             conn = mysql.connect()
             cursor = conn.cursor()
             cursor.callproc('sp_updateWish',(_title,_description,_wish_id,_user,_filePath,_isPrivate,_isDone))
